@@ -21,3 +21,19 @@ print("\n")
 for i in repeat('tick', 10):  # <5>
     print(i, end=' ')
 print("\n")
+
+fruits = ["pomegranate", "cherry", "apricot", "apple",
+"lemon", "kiwi", "orange", "lime", "watermelon", "guava",
+"papaya", "fig", "pear", "banana", "tamarind", "persimmon",
+"elderberry", "peach", "blueberry", "lychee", "grape", "date" ]
+
+fgen = (f.upper() for f in fruits)
+print(fgen)
+print(islice(fgen, 3, 8))
+for i in islice(fgen, 3, 8):
+    print(i)
+
+print(list(fgen))
+
+
+print(repeat('wow', 10))

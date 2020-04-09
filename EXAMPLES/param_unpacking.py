@@ -16,9 +16,11 @@ dates = [
     (1927, 12, 7),
 ]  # <1>
 
-for dt in dates:
-    d = date(*dt)  # <2>
-    print(d)
+# for dt in dates:
+#     d = date(*dt)  # <2>  turns  date(TUPLE)  into date(p1, p2, p3)
+#     print(d)
+date_list = [date(*dt) for dt in dates]
+print(date_list)
 
 print()
 
@@ -32,5 +34,5 @@ sort_opts = {
     'reverse': True,
 }  # <3>
 
-sorted_fruits = sorted(fruits, **sort_opts)  # <4>
+sorted_fruits = sorted(fruits, **sort_opts)  # <4>  # equal to  sorted(fruits, key=lambda ..., reverse=True)
 print(sorted_fruits)

@@ -8,7 +8,7 @@ RANKS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
 cards = product(SUITS, RANKS)  # <1>
 print(list(cards), '\n')
 
-cards = [r + s for r, s in product(SUITS, RANKS)]  # <2>
+cards = [r + s for s, r in product(SUITS, RANKS)]  # <2>
 print(cards, '\n')
 
 giant = ['fee', 'fi', 'fo', 'fum']

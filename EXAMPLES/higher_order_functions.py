@@ -17,7 +17,7 @@ def process_list(alist, func):  # <1>
 f1 = process_list(fruits, str.upper)  # <3>
 print(f1, "\n")
 
-f2 = process_list(fruits, lambda s: s[0].upper())  # <4>
+f2 = process_list(fruits, lambda s: s[:3].upper())  # <4>
 print(f2, "\n")
 
 f3 = process_list(fruits, len)  # <5>

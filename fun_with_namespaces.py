@@ -1,20 +1,34 @@
 #!/usr/bin/env python
+import sys
+
+def print(*args):
+    __builtins__.print(*args)
+    # for arg in args:
+    #     sys.stdout.write(str(arg).upper() + ' ')
+    # sys.stdout.write('\n')
 
 x = 1234   #  global
 
 class Toast:
     pass
 
-def spam():  # global
+def spam() -> None:  # global
+    """
+    A very silly function
+
+    :return: Nothing at all
+    """
     x = 5.6  # local???
     y = "wombat"    # local
     print("in spam(): x is", x)
     print("in spam(): GLOBAL x is", globals()['x'])
 
     def ham():
-        pass
+        print("in ham: x is", x)
 
     print("locals:", locals(), '\n')
+
+    # local -> nonlocal -> global -> builtin
 
 spam()
 
@@ -51,6 +65,12 @@ if x > 50:
     y = "Mickey Mouse"
 print(y)
 
+print(dir(__builtins__), '\n')
 
+print(dir(spam))
+
+print(spam.__doc__, '\n')
+
+print(spam.__annotations__, '\n')
 
 

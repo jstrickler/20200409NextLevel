@@ -15,9 +15,11 @@ print("result is", result)
 
 # product
 result = reduce(mul, values)  # <3>
-print("result is", result)
+print("result is {:,d}".format(result))
 
-strings = ['fi', 'fi', 'fo', 'fum']
+x = 32_234_830_771_392
+
+strings = ['fee', 'fi', 'fo', 'fum']
 
 # join
 result = reduce(add, strings, "") # <4>
@@ -26,3 +28,21 @@ print("result is", result)
 # join + upper case
 result = reduce(add, map(str.upper, strings), "")  # <5>
 print("result is", result)
+
+# map a function that triples values to a list of numbers
+result = map(lambda x: x * 3, values)
+print(list(result))
+
+result = map(lambda x: x * 3, strings)
+print(list(result))
+
+result = [v * 3 for v in values]
+print(result)
+
+result = (v * 3 for v in values)
+print(result)
+print(list(result))
+
+
+
+

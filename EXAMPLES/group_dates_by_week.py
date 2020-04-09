@@ -12,6 +12,7 @@ date_details = [
 
 def main():
     sample_dates = generate_sample_dates()
+    # print(sample_dates)
     display_groups(sample_dates)
 
 
