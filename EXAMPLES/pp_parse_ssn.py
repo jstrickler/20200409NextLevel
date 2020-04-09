@@ -25,5 +25,7 @@ input_string = """
 
 for matches, start, stop in ssn_parser.scanString(input_string):  # <5>
     print(matches, start, stop)
+print()
 
-
+for match in ssn_parser.searchString(input_string):  # <5>
+    print(match)

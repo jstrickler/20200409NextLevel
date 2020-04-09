@@ -3,6 +3,7 @@
 import flylib
 import quacklib
 
+
 class Duck(object):
 
     def __init__(
