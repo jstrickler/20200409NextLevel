@@ -1,5 +1,3 @@
-# 20200409NextLevel
-
 # Playing with Markdown
 
 ## Text styles 
@@ -98,10 +96,12 @@ This is ~~a test~~ real
 ## Emoji
 
 :grinning:
-:smiling:
+:smiley:
 :smile:
 
 :poop:
+
+:hearteyes:
 
 
 
